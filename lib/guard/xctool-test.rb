@@ -1,8 +1,10 @@
-require_relative './xctool_helper'
-require 'guard/guard'
 require 'guard'
+require 'guard/plugin'
+
+require_relative './xctool_helper'
+
 module Guard
-  class XctoolTest < ::Guard::Guard
+  class XctoolTest < Plugin
     include XctoolHelper
 
     attr_reader :xctool, :test_paths, :test_target, :cli, :all_on_start
@@ -15,7 +17,7 @@ module Guard
     # @option options [Symbol] group the group this Guard plugin belongs to
     # @option options [Boolean] any_return allow any object to be returned from a watcher
     #
-    def initialize(watchers = [], options = {})
+    def initialize(options = {})
       super
 
       @cli = options[:cli] || ""
