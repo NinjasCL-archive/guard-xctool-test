@@ -20,6 +20,7 @@ Or install it yourself as:
 
 - Ruby 1.9.3 or above
 - [xctool](https://github.com/facebook/xctool)
+- Guard 2.x
 
 ## Guardfile
 
