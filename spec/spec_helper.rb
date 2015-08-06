@@ -1,2 +1,2 @@
 $LOAD_PATH << "./lib"
-require 'guard/xctooltest'
+require 'guard/xctool-test'
